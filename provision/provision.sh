@@ -25,6 +25,9 @@ cp /provision/conf/my.cnf /etc/mysql/my.cnf
 cp /provision/conf/apache2.conf /etc/apache2/
 cp /provision/conf/000-default.conf /etc/apache2/sites-available/
 
+# Set up mysqld with config
+mysql_install_db
+
 # Install Compose
 php -r "readfile('https://getcomposer.org/installer');" | php
 mv composer.phar /usr/local/bin/composer
@@ -32,4 +35,6 @@ mv composer.phar /usr/local/bin/composer
 # Install Drush
 # TODO: Check if this even works (env stuff)
 composer global require drush/drush
+
+rm -r /provision
 

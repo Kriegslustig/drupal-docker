@@ -3,6 +3,7 @@ FROM ubuntu:15.10
 MAINTAINER Kriegslustig <github@ls7.ch>
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV HOME /root
 
 RUN mkdir /provision
 ADD provision /provision
