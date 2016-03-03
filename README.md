@@ -1,4 +1,4 @@
-# kriegslustig/lamp 0.1.1
+# kriegslustig/lamp 0.1.2
 
 A Docker container used to run LAMP apps.
 
