@@ -9,6 +9,9 @@ RUN mkdir /provision
 ADD provision /provision
 RUN /provision/provision.sh
 
+RUN usermod -u 1000 www-data
+RUN usermod -G staff www-data
+
 EXPOSE 80
 
 RUN locale-gen en_US.UTF-8

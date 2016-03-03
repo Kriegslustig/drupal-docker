@@ -1,13 +1,15 @@
 #!/bin/bash
 
+apt-get update
 apt-get install -y \
   lamp-server^ \
   vim \
   curl \
+  php5-gd \
   php5-curl \
   cron \
   git \
-  python \
+  python
 
 # Set up supervisord
 mkdir -p /etc/supervisord/
@@ -31,6 +33,9 @@ mysql_install_db
 # Install Compose
 php -r "readfile('https://getcomposer.org/installer');" | php
 mv composer.phar /usr/local/bin/composer
+
+# Enable some mods
+a2enmod rewrite
 
 rm -r /provision
 
