@@ -32,9 +32,5 @@ mysql_install_db
 php -r "readfile('https://getcomposer.org/installer');" | php
 mv composer.phar /usr/local/bin/composer
 
-# Install Drush
-# TODO: Check if this even works (env stuff)
-composer global require drush/drush
-
 rm -r /provision
 
