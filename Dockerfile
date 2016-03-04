@@ -13,6 +13,7 @@ RUN usermod -u 1000 www-data
 RUN usermod -G staff www-data
 
 EXPOSE 80
+EXPOSE 3306
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
